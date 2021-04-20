@@ -16,13 +16,29 @@
                     </tr>
                     <xsl:apply-templates select="modulos/modulo"/>
                 </table>
+                <table>
+                    <tr>
+                        <th>Código del profesor</th>
+                        <th>Nombre del profesor</th>
+                    </tr>
+                    <xsl:apply-templates select="profesores/profesor"/>
+                </table>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="modulos/modulo">
-        <td><xsl:value-of select="@codM"/></td>
-        <td><xsl:value-of select="."/></td>
+        <tr>
+            <td><xsl:value-of select="@codM"/></td>
+            <td><xsl:value-of select="."/></td>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="profesores/profesor">
+        <tr>
+            <td><xsl:value-of select="@codP"/></td>
+            <td><xsl:value-of select="."/></td>
+        </tr>
     </xsl:template>
 
 </xsl:stylesheet>
