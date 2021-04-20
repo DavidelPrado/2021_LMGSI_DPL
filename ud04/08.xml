@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lugares [
+    <!ELEMENT lugares ((#PCDATA)|lugar)+>
+    <!ELEMENT lugar (#PCDATA)>
+]>
+
+<lugares  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNameSpaceSchemaLocation="08.xsd">En el <lugar>Polo norte</lugar> hace mucho frio. Pero, en el <lugar>Desierto del Sahara</lugar> hace mucho calor.</lugares>

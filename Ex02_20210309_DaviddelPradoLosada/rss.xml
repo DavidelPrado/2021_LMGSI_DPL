@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Planetas</title>
+        <link>https://mapaestelar.com</link>
+        <description>
+            <![CDATA[
+		<h1>Noticias sobre los planetas.</h1>
+            ]]>
+        </description>
+        <category>noticias</category>
+        <language>es-es</language>
+        <item>
+            <title>Mercurio</title>
+            <link>https://mapaestelar.com/mercurio.html</link>
+            <guid isPermaLink="true">https://mapaestelar.com/mercurio.html</guid>
+            <description>
+		<![CDATA[
+                    <p>Jhon Paso habla de su investigacion de Mercurio.</p>
+		]]>
+            </description>
+        </item>
+        <item>
+            <title>Venus</title>
+            <link>https://mapaestelar.com/venus.html</link>
+            <guid isPermaLink="true">https://mapaestelar.com/venus.html</guid>
+            <description>
+		<![CDATA[
+                    <p>Richard Blu habla de su investigacion de Venus.</p>
+		]]>
+            </description>
+        </item>
+        <item>
+            <title>Tierra</title>
+            <link>https://mapaestelar.com/tierra.html</link>
+            <guid isPermaLink="true">https://mapaestelar.com/tierra.html</guid>
+            <description>
+		<![CDATA[
+                    <p>Mary Patio habla de su investigacion de la Tierra.</p>
+		]]>
+            </description>
+        </item>
+    </channel>
+</rss>

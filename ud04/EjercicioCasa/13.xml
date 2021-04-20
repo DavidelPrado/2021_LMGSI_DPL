@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plantilla SYSTEM "13.dtd">
+<plantilla 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+    xsi:noNameSpaceSchemaLocation="esquema.xsd">
+    <tipos>
+        <fieldset>
+            <legend>Tipo texto</legend>
+            <tipo>Text</tipo>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo radio</legend>
+            <tipo>Radio</tipo>
+            <contenido>
+                <opcion>Radio1</opcion>
+                <opcion>Radio2</opcion>
+                <opcion>Radio3</opcion>
+            </contenido>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo checkbox</legend>
+            <tipo>Checkbox</tipo>
+            <contenido>
+                <opcion>Checkbox1</opcion>
+                <opcion>Checkbox2</opcion>
+                <opcion>Checkbox3</opcion>
+            </contenido>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo correo electronico</legend>
+            <tipo>Email</tipo>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo telefono</legend>
+            <tipo>Tel</tipo>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo fecha</legend>
+            <tipo>Date</tipo>
+            <contenido>
+                <fecha dia="02" mes="03" año="2021"/>
+            </contenido>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo hora</legend>
+            <tipo>Time</tipo>
+            <contenido>
+                <tiempo horas="17" minutos="42" segundos="01"/>
+            </contenido>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo semana</legend>
+            <tipo>Week</tipo>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo mes</legend>
+            <tipo>Month</tipo>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo texto</legend>
+            <tipo>Texto</tipo>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo rango</legend>
+            <tipo>Range</tipo>
+        </fieldset>
+    </tipos>
+    <fieldset>
+        <legend>Listas</legend>
+        <tipo>List</tipo>
+        <contenido>
+            <opcion>Valor1</opcion>
+            <opcion>Valor2</opcion>
+            <opcion>Valor3</opcion>
+        </contenido>
+        <tipo>ListaDefinida</tipo>
+        <contenido>
+            <opcion>Opcion1</opcion>
+            <opcion>Opcion2</opcion>
+            <opcion>Opcion3</opcion>
+        </contenido>
+    </fieldset>
+    <fieldset>
+        <legend>Area de texto</legend>
+        <tipo>TextArea</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Imagen</legend>
+        <tipo>Image</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Busqueda</legend>
+        <tipo>Search</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Url</legend>
+        <tipo>Url</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Contraseña</legend>
+        <tipo>Password</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Numero</legend>
+        <tipo>Number</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Fichero</legend>
+        <tipo>File</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Color</legend>
+        <tipo>Color</tipo>
+    </fieldset>
+    <fieldset>
+        <legend>Restablecer</legend>
+        <tipo>Reset</tipo>
+    </fieldset>
+</plantilla>

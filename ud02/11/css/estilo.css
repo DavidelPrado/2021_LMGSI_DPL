@@ -1,0 +1,120 @@
+﻿body{
+	background-image: url("../images/prince.png");
+	background-position: top right;
+	background-repeat: no-repeat;
+	margin-right: 250px;
+}
+
+h1{
+	color: #FF4500;
+	background-color: #FFB973;
+}
+
+div{
+	padding: 6px;
+	margin: 6px 0px;
+}
+
+.par1{
+	background-color: lightblue;
+	color: #008000;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin: 6px 0;
+}
+
+.static{
+	border: solid 1px #E9967A;
+}
+
+.relative{
+	position: relative;
+	border: dotted 1px #9932CC;
+	left: 2%;
+}
+
+.fixed{
+	border: dashed 3px #04B404;
+	background-color: #FFB973;
+	max-width: 230px;
+	position: fixed;
+	right: 0px;
+	bottom: 9px;
+}
+
+.relative1{
+	border: solid 3px #04B404;
+	position: relative;
+	width: 33%;
+	padding-bottom: 100px;
+}
+
+.absolute1{
+	border: solid 3px lightgreen;
+	position: absolute;
+	bottom: 0px;
+	right: 3px;
+	left: 50%;
+}
+
+.sticky{
+	background-color: #008000;
+	border: solid 1px lightgreen;
+	color: lightgreen;
+	position: sticky;
+	text-align: center;
+	border-radius: 25px;
+}
+
+.img1{
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	width: 30%;
+	opacity: 0.5;
+}
+
+.container{
+	position: relative;
+	border: solid 3px #8B008B;
+}
+
+.img2{
+	width: 50%;
+	height: auto;
+	opacity: 0.5;
+}
+
+.topleft, .topright, .bottomleft, .bottomright, .center{
+	position: absolute;
+	font-size: 18px;
+	font-variant: small-caps;
+	color: #8B008B;
+	background-color: #FF9C00;
+	border: 3px solid #8B008B;
+}
+
+.topleft{
+	top: 9px;
+	left: 9px;
+}
+
+.topright{
+	top: 9px;
+	right: 9px;
+}
+
+.center{
+	top: 50%;
+	right: 50%;
+}
+
+.bottomleft{
+	bottom: 9px;
+	left: 9px;
+}
+
+.bottomright{
+	bottom: 9px;
+	right: 9px;
+}

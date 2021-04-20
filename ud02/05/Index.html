@@ -1,0 +1,120 @@
+<!--
+Autor: David del Prado Losada
+Creado: 27/10/2020
+Modificado: 29/10/2020
+-->
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="../../images/D.ico">
+		<title>HTML05 David del Prado</title>
+	</head>
+	<body>
+		<header>
+			<h1>Plantilla de formulario de elementos aprendidos en clase</h1>
+		</header>
+		<form action="registro.php">
+			<fieldset style="background-color: rgb(254,254,156)">
+				<legend style="border: 1px solid black; background-color: white">Tipo texto</legend>
+				<p><label for="nombre"><input required type="text" name="nombre" id="nombre"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(241,194,156)">
+				<legend style="border: 1px solid black; background-color: white">Tipo radio</legend>
+				<p><label for="rad1"><input type="radio" name="radio" id="rad1">Radio 1</label></p>
+				<p><label for="rad2"><input type="radio" name="radio" id="rad2">Radio 2</label></p>
+				<p><label for="rad3"><input type="radio" name="radio" id="rad3">Radio 3</label></p>
+			</fieldset>
+			<fieldset style="background-color: orange">
+				<legend style="border: 1px solid black; background-color: white">Tipo checkbox</legend>
+				<p><label for="c1"><input type="checkbox" name="radio" id="c1">Checkbox 1</label></p>
+				<p><label for="c2"><input type="checkbox" name="radio" id="c2">Checkbox 2</label></p>
+				<p><label for="c3"><input type="checkbox" name="radio" id="c3">Checkbox 3</label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,194,241)">
+				<legend style="border: 1px solid black; background-color: white">Tipo correo electrónico</legend>
+				<p><label for="email">Escribe tu email:<input type="email" name="email" id="email"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,241,194)">
+				<legend style="border: 1px solid black; background-color: white">Tipo teléfono</legend>
+				<p><label for="tel">Escribe tu telefono:<input type="tel" name="tel" id="tel"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(194,241,156)">
+				<legend style="border: 1px solid black; background-color: white">Tipo fecha</legend>
+				<p><label for="date">Fecha:<input type="date" name="date" id="date"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(241,156,194)">
+				<legend style="border: 1px solid black; background-color: white">Tipo time</legend>
+				<p><label for="time">Hora:<input type="time" name="time" id="time"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(241,241,194)">
+				<legend style="border: 1px solid black; background-color: white">Tipo week</legend>
+				<p><label for="week">Semana:<input type="week" name="week" id="week"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,241,241)">
+				<legend style="border: 1px solid black; background-color: white">Tipo month</legend>
+				<p><label for="month">Mes:<input type="month" name="month" id="month"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,194,194)">
+				<legend style="border: 1px solid black; background-color: white">Tipo range</legend>
+				<p><label for="range">Rango:<input type="range" name="range" id="range"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(194,241,194)">
+				<legend style="border: 1px solid black; background-color: white">Listas</legend>
+				<select>
+					<option value="1">Valor 1</option>
+					<option value="2">Valor 2</option>
+					<option value="3">Valor 3</option>
+				</select>
+				<br/><br/>
+				<label for="ListaDef"></label>
+				<input list="ListaDefinida" name="ListaDef" type="text" id="ListaDef">
+				<datalist id="ListaDefinida">
+					<option value="Opción 1">
+					<option value="Opción 2">
+					<option value="Opción 3">
+				</datalist>
+			</fieldset>
+			<fieldset  style="background-color: rgb(194,194,156)">
+				<legend style="border: 1px solid black; background-color: white">Textarea</legend>
+				<textarea name="area-de-texto" rows="3" cols="50"></textarea>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,241,156)">
+				<legend style="border: 1px solid black; background-color: white">Input de tipo image</legend>
+				<img src="./images/html5.png" width="100" height="100" title="Visita El Pais">
+			</fieldset>
+			<fieldset style="background-color: rgb(194,156,156)">
+				<legend style="border: 1px solid black; background-color: white">Search</legend>
+				<p><label for="buscar">Buscar: <input type="search" id="buscar" name="buscar"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(194,194,194)">
+				<legend style="border: 1px solid black; background-color: white">URL</legend>
+				<p><label for="url"><input type="url" id="url" name="url"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,156,156)">
+				<legend style="border: 1px solid black; background-color: white">Password</legend>
+				<p><label for="contrasena">Introduce contraseña: <input type="password" id="contrasena" name="contrasena"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(241,241,241)">
+				<legend style="border: 1px solid black; background-color: white">Number</legend>
+				<p><label for="numero">Introduce tu nota: <input type="number" id="numero" name="numero" min="1" max="10"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,194,156)">
+				<legend style="border: 1px solid black; background-color: white">File</legend>
+				<p><label for="fichero">Selecciona un fichero: <input type="file" id="fichero" name="fichero"></label></p>
+			</fieldset>
+			<fieldset style="background-color: rgb(241,194,241)">
+				<legend style="border: 1px solid black; background-color: white">Submit</legend>
+				<input type="submit" value="Submit">
+			</fieldset>
+			<fieldset style="background-color: rgb(194,156,194)">
+				<legend style="border: 1px solid black; background-color: white">Color</legend>
+				<label for="color">Selecciona un color: <input type="color" id="color"></label>
+			</fieldset>
+			<fieldset style="background-color: rgb(156,194,254)">
+				<legend style="border: 1px solid black; background-color: white">Reset</legend>
+				<input type="reset">
+			</fieldset>
+		</form>
+	</body>
+</html>

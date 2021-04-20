@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="plantilla">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tipos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="fieldset" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="legend" type="xs:string"/>
+                                        <xs:element name="tipo" type="xs:string"/>
+                                        <xs:element name="contenido">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="fecha">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:restriction base="xs:positiveInteger">
+                                                                    <xs:attribute name="dia">
+                                                                        <xs:simpleType>
+                                                                            <xs:restriction base="xs:positiveInteger">
+                                                                                <xs:pattern value="01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31"/>
+                                                                            </xs:restriction>
+                                                                        </xs:simpleType>
+                                                                    </xs:attribute>
+                                                                    <xs:attribute name="mes">
+                                                                        <xs:simpleType>
+                                                                            <xs:restriction base="xs:positiveInteger">
+                                                                                <xs:pattern value="01|02|03|04|05|06|07|08|09|10|11|12"/>
+                                                                            </xs:restriction>
+                                                                        </xs:simpleType>
+                                                                    </xs:attribute>
+                                                                    <xs:attribute name="año">
+                                                                        <xs:simpleType>
+                                                                            <xs:restriction base="xs:positiveInteger">
+                                                                                <xs:pattern value="2020|2021"/>
+                                                                            </xs:restriction>
+                                                                        </xs:simpleType>
+                                                                    </xs:attribute>
+                                                                </xs:restriction>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="hora" type="xs:string">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:restriction base="xs:positiveInteger">
+                                                                    <xs:attribute name="horas">
+                                                                        <xs:simpleType>
+                                                                            <xs:restriction base="xs:positiveInteger">
+                                                                                <xs:pattern value="01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24"/>
+                                                                            </xs:restriction>
+                                                                        </xs:simpleType>
+                                                                    </xs:attribute>
+                                                                    <xs:attribute name="minutos">
+                                                                        <xs:simpleType>
+                                                                            <xs:restriction base="xs:positiveInteger">
+                                                                                <xs:pattern value="01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59"/>
+                                                                            </xs:restriction>
+                                                                        </xs:simpleType>
+                                                                    </xs:attribute>
+                                                                    <xs:attribute name="segundos">
+                                                                        <xs:simpleType>
+                                                                            <xs:restriction base="xs:positiveInteger">
+                                                                                <xs:pattern value="01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59"/>
+                                                                            </xs:restriction>
+                                                                        </xs:simpleType>
+                                                                    </xs:attribute>
+                                                                </xs:restriction>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fieldset" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="legend" type="xs:string"/>
+                            <xs:element name="tipo" type="xs:string"/>
+                            <xs:element name="contenido">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="opcion" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

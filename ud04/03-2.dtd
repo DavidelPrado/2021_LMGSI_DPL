@@ -1,0 +1,7 @@
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT fecha EMPTY>
+<!ELEMENT hechosHistoricos (descripcion, fecha)>
+<!ELEMENT hechos (hechosHistoricos*)>
+<!ATTLIST fecha dia CDATA #REQUIRED>
+<!ATTLIST fecha mes CDATA #REQUIRED>
+<!ATTLIST fecha anyo CDATA #REQUIRED>

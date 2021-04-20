@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT plantilla (tipos|fieldset)*>
+<!ATTLIST plantilla
+    xsi:noNameSpaceSchemaLocation CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED>
+
+<!ELEMENT tipos (fieldset)*>
+<!ELEMENT fieldset (legend|tipo|contenido)*>
+<!ELEMENT legend (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT contenido (opcion|fecha|tiempo)*>
+<!ELEMENT opcion (#PCDATA)>
+<!ELEMENT fecha EMPTY>
+<!ATTLIST fecha
+    dia (01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31) #REQUIRED
+    mes (01|02|03|04|05|06|07|08|09|10|11|12) #REQUIRED
+    año (2020|2021) #REQUIRED>
+<!ELEMENT tiempo EMPTY>
+<!ATTLIST tiempo
+    horas (01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24) #REQUIRED
+    minutos (01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59) #REQUIRED
+    segundos (01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59) #REQUIRED>

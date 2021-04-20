@@ -1,0 +1,21 @@
+﻿body{
+	background-color: #E6E6FA;
+}
+
+h1{
+	font-size: 30px;
+	text-align: center;
+	background-color: #9370DB;
+}
+
+h3{
+	text-align: center;
+}
+
+a{
+	text-decoration: none; color: #4B0082; width: auto;  padding-left: 45%; 
+}
+
+.rss{
+	text-decoration: none; color: #4B0082; width: auto; padding-left: 40%; margin-top: 100px; 
+}

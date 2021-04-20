@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <!-- Declaracion TipoModulo-->
+    <xs:complexType name="tipoModulo">
+        <xs:sequence>
+            <xs:element name="modulo" type="tipoModulo" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tipoModulo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="codM" type="xs:string" use="required"/>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:ID">
+                            <xs:pattern value="EDD|LMSGI|PROG|BBDD|FOL|SINF|XXX"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Declaracion TipoProfesor-->
+    <xs:complexType name="tipoProfesor">
+        <xs:sequence>
+            <xs:element name="profesor" type="tipoProfesor" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tipoProfesor">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="codP" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Declaracion TipoImparte-->
+    <xs:complexType name="tipoImparte">
+        <xs:sequence>
+            <xs:element name="asignatura" type="tipoAsignatura" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tipoAsignatura">
+        <xs:attribute name="codM" type="xs:string" use="required"/>
+            <xs:simpleType>
+                <xs:restriction base="xs:ID">
+                    <xs:pattern value="EDD|LMSGI|PROG|BBDD|FOL|SINF|XXX"/>
+                </xs:restriction>
+            </xs:simpleType>
+        <xs:attribute name="codProfesor" type="xs:string" use="required"/>
+    </xs:complexType>
+    <!-- Declaracion TipoGrupo-->
+    <xs:complexType name="tipoGrupo">
+        <xs:sequence>
+            <xs:element name="hora" type="tipoHora" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="idgrupo" type="xs:string" use="required"/>
+            <xs:simpleType>
+                <xs:restriction base="xs:ID">
+                    <xs:pattern value="DAW1|DAW2|SMR2|SMR1"/>
+                </xs:restriction>
+            </xs:simpleType>
+        <xs:attribute name="codT" type="xs:ID" use="required"/>
+    </xs:complexType>
+    
+        <xs:complexType name="tipoHora">
+            <xs:sequence>
+                <xs:element name="dia_sem" type="tipoDiaSem" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="entrada" type="xs:string" use="required"/>
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="08:30|09:20|10:10|11:00|12:15|13:05"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            <xs:attribute name="salida" type="xs:string" use="required"/>
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="09:20|10:10|11:00|11:50|13:05|13:55"/>
+                    </xs:restriction>
+                </xs:simpleType>
+        </xs:complexType>
+        
+            <xs:complexType name="tipoDiaSem">
+                <xs:simpleContent>
+                    <xs:sequence>
+                        <xs:attribute name="dia" type="xs:string" use="required"/>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:ID">
+                                    <xs:pattern value="lunes|martes|miercoles|jueves|viernes"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        <xs:attribute name="num" type="xs:string" default="1"/>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:ID">f
+                                    <xs:pattern value="1|2"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                    </xs:sequence>
+                </xs:simpleContent>
+            </xs:complexType>
+    
+    <!-- Declaracion de Elementos Complejos-->
+    <xs:element name="horario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="modulos" type="tipoModulo"/>
+                <xs:element name="profesores" type="tipoProfesor"/>
+                <xs:element name="imparte" type="tipoImparte"/>
+                <xs:element name="grupo" maxOccurs="4" type="tipoGrupo"/>
+            </xs:sequence>
+            <xs:attribute name="curso" type="xs:string" use="implied"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

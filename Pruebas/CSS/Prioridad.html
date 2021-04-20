@@ -1,0 +1,48 @@
+<!--
+Autor: David del Prado Losada
+Creado: 05/11/2020
+Modificado:
+-->
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Estilos</title>
+		<link rel="stylesheet" type="text/css" href="style/estilo.css">
+		<style>
+			p {color:red;}
+			.destacado {background-color: grey}
+			#naranja {color: orange}
+			div span {background-color: green}
+			li ~ li {color: blue}
+			p:first-letter {text-transform:uppercase; font-size:30px;}
+			p:before {content:url("images/andres.jpg");}
+			p:after {content:"."}
+			li:nth-child(2n) {color:yellow;}
+			li:nth-child(2n+1) {color:orange;}
+			p[class] {text-transform:uppercase}
+			a:hover {text-transform:uppercase}
+			a:active {text-color:green}
+			a:link {text-color:pink}
+			a:visited {text-color:orange}
+		</style>
+	</head>
+	<body>
+		<h1>Bienvenido</h1>
+		<p class="destacado">Hola mundo</p>
+		<p style="color: blue">Hola mundo</p>
+		<p class="destacado">Hola mundo</p>
+		<p>Hola mundo</p>
+		<div>Hoy es <span>jueves</span></div>
+		<ul>
+			<li>uno</li>
+			<li>dos</li>
+			<li>tres</li>
+			<li>cuatro</li>
+			<li>cinco</li>
+			<li>seis</li>
+			<li>siete</li>
+		</ul>
+		<h5><a href="https://elpais.com/" >Link</a></h5>
+	</body>
+</html>

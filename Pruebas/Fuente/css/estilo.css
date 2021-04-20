@@ -1,0 +1,25 @@
+div {
+	margin-bottom: 10px;
+	}
+	
+div:nth-child(1):first-line{
+	word-spacing: 15px;
+	}
+	
+div:nth-child(2):first-line{
+	letter-spacing: 15px;
+	}
+	
+div:nth-child(1){
+	font-family: "Goldman",cursive;
+	}
+	
+div:nth-child(2){
+	font-family: "Big shoulders Stencil Display",cursive;
+	}
+	
+div:nth-child(3){
+	font-family: "Brightons",cursive;
+	src: url("../../font/brightons");
+	text-align-last: justify;
+	}

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT mapaEstelar (constelacion+)>
+<!ATTLIST mapaEstelar
+    xsi:noNameSpaceSchemaLocation CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED>
+<!ELEMENT constelacion (nombreEspañol,superficie,estrellas,objetos,colindantes,observacion)>
+<!ATTLIST constelacion
+    nombreLatin CDATA #REQUIRED>
+
+<!ELEMENT nombreEspañol (#PCDATA)>
+<!ELEMENT superficie (#PCDATA)>
+<!ELEMENT estrellas (asterismo,masbrillante)>
+<!ATTLIST estrellas
+    numeroEstrellas CDATA #REQUIRED>
+<!ELEMENT asterismo (#PCDATA)>
+<!ELEMENT masbrillante (#PCDATA)>
+<!ATTLIST masbrillante
+    luminosidad CDATA #REQUIRED>
+
+<!ELEMENT objetos (cumulos,nebulosas,galaxias,cuasares,lluviaMeteoros*)>
+<!ELEMENT cumulos (#PCDATA)>
+<!ELEMENT nebulosas (#PCDATA)>
+<!ELEMENT galaxias (#PCDATA)>
+<!ELEMENT cuasares (#PCDATA)>
+<!ELEMENT lluviaMeteoros (#PCDATA)>
+
+<!ELEMENT colindantes (#PCDATA)>
+<!ELEMENT observacion (hemisferio,mes,hora)>
+<!ELEMENT hemisferio (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>

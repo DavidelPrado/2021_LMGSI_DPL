@@ -1,0 +1,120 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face{
+	font-family: 'FontAwesome';
+	src: url("../fonts/fontawesome/webfonts/fa-solid-900.woff");
+}
+
+
+
+
+
+
+#content #izquierda{
+	background-color: grey;
+	float: left;
+	width: 30%;
+	padding-left: 20px;
+}
+
+#content #derecha{
+	background-color: lightyellow;
+	float: right;
+	width: 70%;
+}
+
+#content #izquierda figure{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#content #izquierda figcaption{
+	color: white;
+}
+
+#content #izquierda .dato{
+	padding: 20px;
+	position: relative;
+}
+
+#content #izquierda .dato span{
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+#content #izquierda .dato:before{
+	position: absolute;
+	font-family: 'FontAwesome';
+	width: 30px;
+	height: 30px;
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	border: 1px solid white;
+	border-radius: 50px;
+	padding: 5px;
+	top: 9px;
+	left: -20px;
+}
+
+#content #izquierda .direccion:before{
+	content: "\f060";
+}
+
+#content #izquierda .telefono:before{
+	content: "\f10b";
+}
+
+#content #izquierda .mail:before{
+	content: "\f199";
+}
+
+#content #izquierda .fecha:before{
+	content: "\f133";
+}
+
+#content #izquierda .nacionalidad:before{
+	content: "\f005";
+}
+
+#content #izquierda .estado:before{
+	content: "\f004";
+}
+
+#content #izquierda .dni:before{
+	content: "\f015";
+}
+
+#content #izquierda .hora:before{
+	content: "\f017";
+}
+
+
+
+
+#content #derecha .h .izq{
+	float: left;
+	width: 50%;
+	padding: 20px;
+}
+
+#content #derecha .h .izq .blue{
+	color: blue;
+}
+
+#content #derecha .h .der{
+	float: right;
+	width: 50%;
+	padding: 20px;
+}
+
+#content #derecha .h2{
+	position: relative;
+	margin-top: 0;
+}
