@@ -4,7 +4,6 @@
     <xsl:template match="/listatickets">
         <html>
             <head>
-                <META http-equiv="Content-Type" content="text/html; cahrset=UTF-8"/>
                 <title>02 XSLT David del Prado Losada</title>
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,6 +16,7 @@
                 <link rel="icon" href="favicon.ico" type="image/x-icon"/>
             </head>
             <body>
+                <xsl:apply-templates select="comment()"/>
                 <h1>Información de tickets</h1>
                 <h2>Listado de tickets</h2>
                 <xsl:apply-templates select="ticket"/>
@@ -25,6 +25,7 @@
             </body>
         </html>
     </xsl:template>
+    
     <xsl:template match="ticket">
         <p>Tickets: <xsl:value-of select="numero"/></p>
         <table>
@@ -48,5 +49,13 @@
             <td><xsl:value-of select="nombre"/></td>
             <td><xsl:value-of select="precio"/></td>
         </tr>
+    </xsl:template>
+    
+    <xsl:template match="comment()">
+        <xsl:text xml:space="preserve">
+            <xsl:comment>
+                <xsl:value-of select="."/>
+            </xsl:comment>
+        </xsl:text>
     </xsl:template>
 </xsl:stylesheet>
