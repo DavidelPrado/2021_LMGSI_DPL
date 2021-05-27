@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="prediccion">
+        <xs:complexType>
+            <xs:sequence>
+                <!--Elemento municipio-->
+                <xs:element name="municipio">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="String" maxOccurs="1"/>
+                            <xs:element name="provincia" type="String" maxOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:positiveInteger">
+                                    <xs:pattern value="[0-9]{5}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <!--Elemento dia-->
+                <xs:element name="dia">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!--Elemento precipitacion-->
+                            <xs:element name="prob_precipitacion" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="0"/>
+                                        <xs:maxInclusive value="100"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <!--Elemento cielo-->
+                            <xs:element name="estado_cielo" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="descripcion" use="required" type="xs:string"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <!--Elemento viento-->
+                            <xs:element name="viento" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="direccion" type="xs:string"/>
+                                        <xs:element name="velocidad" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!--Elemento temperatura-->
+                            <xs:element name="temperatura" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="maxima" type="xs:integer"/>
+                                        <xs:element name="minima" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="fecha" type="xs:date">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:date"/>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
