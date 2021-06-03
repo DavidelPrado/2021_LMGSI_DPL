@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+    <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+ 
     <xsl:output method="html"/>
     <xsl:include href="./lib/libWeb.xsl"/>
     <xsl:template match="/">
@@ -13,9 +14,35 @@
                 </xsl:call-template>
             </head>
             <body>
-                <h1>HOROSCOPO <xsl:value-of select="document('signos.xml')//signo[@id=current()//sing/@id]/nombre"</h1>
-                 
+                <div id="contenedor">
+                    <h1>HOROSCOPO/SIGNOS DEL ZODIACO </h1>
+                    <xsl:apply-templates select="//signo"/>
+                </div>
             </body>
         </html>
+    </xsl:template>
+  
+    <xsl:template match="//signo">
+        <div class="caja">
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="concat('horoscopo\',nombre,'\horoscopo.xml')"/>
+                </xsl:attribute>
+            <img>
+                <xsl:attribute name="src">
+                    <xsl:value-of select="concat('images\',@id,'.svg')"/>
+                </xsl:attribute>
+                <xsl:attribute name="alt">
+                    <xsl:value-of select="nombre"/>
+                </xsl:attribute>
+                <xsl:attribute name="style">
+                   background-image:url('<xsl:value-of select="concat('images/bg-', @id, '.jpg')"/>')
+                </xsl:attribute>
+               
+            </img>
+            </a>
+            <div><xsl:value-of select="nombre"/></div>
+            <div class="fecha"><xsl:value-of select="fecha"/></div>
+        </div>
     </xsl:template>
 </xsl:stylesheet>

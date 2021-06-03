@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html"/>
-    <xsl:include href="../lib/web.xsl"/>
-
+    <xsl:include href="../lib/libWeb.xsl"/>
     <xsl:template match="/">
-        <xsl:variable name="signo" select="'Aries'"/>
-        <xsl:call-template name="docTipo"/>
+        <xsl:call-template name="DocTipo"/>
         <html>
-             <html>
             <head>
                 <xsl:call-template name="metaWeb">
                     <xsl:with-param name="titulo" select="'Horoscopo David del Prado'"/>
@@ -16,33 +12,27 @@
                 </xsl:call-template>
             </head>
             <body>
-                <div class="imagenes">
-                    <xsl:element name="img">
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="concat('../images/bg-', //@id, '.jpg')"/>
-                        </xsl:attribute>
-                        <xsl:attribute name="alt">
-                            <xsl:value-of select="nombre"/>
-                        </xsl:attribute>
-                    </xsl:element>
-                    <xsl:element name="img">
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="concat('../images/', //@id, '.svg')"/>
-                        </xsl:attribute>
-                        <xsl:attribute name="alt">
-                            <xsl:value-of select="//source"/>
-                        </xsl:attribute>
-                    </xsl:element>
-                </div>
-                <h1>Horóscopo <xsl:value-of select="$signo"/></h1>
-                <div class="prediccion">
+                <div id="contenedor">
+                    <figure>
+                        <img>
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="concat('../images/',//sign/@id,'.svg')"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:value-of select="//sing/@id"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="style">
+                                background-image:url('<xsl:value-of select="concat('../images/bg-', //sign/@id, '.jpg')"/>')
+                            </xsl:attribute>
+                        </img>
+                    </figure>
+                    <h1>HOROSCOPO <xsl:value-of select="document('../signos.xml')//signo[@id=current()//sign/@id]/nombre"/></h1>
                     <h2>Predicción para hoy <xsl:value-of select="//date"/></h2>
-                    <p>
+                    <div class="mensaje">
                         <xsl:value-of select="//message"/>
-                    </p>
+                    </div>
                 </div>
             </body>
         </html>
     </xsl:template>
-
 </xsl:stylesheet>
