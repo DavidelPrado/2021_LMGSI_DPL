@@ -1,8 +1,9 @@
-des<?xml version="1.0" encoding="ISO-8859-15" ?>
+<?xml version="1.0" encoding="ISO-8859-15" ?>
+<!DOCTYPE prediccion SYSTEM "prediccion.dtd">
 <prediccion>
     <municipio id="49021">
         <nombre>Benavente</nombre>
-        <provincia>Zamora</provincia>
+	<provincia>Zamora</provincia>
     </municipio>
     <dia fecha="2013-06-11">
         <prob_precipitacion>5</prob_precipitacion>

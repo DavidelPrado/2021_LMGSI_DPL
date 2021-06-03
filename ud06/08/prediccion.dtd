@@ -8,6 +8,9 @@
 <!ATTLIST municipio
     id CDATA #REQUIRED>
 
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+
 <!ELEMENT dia (prob_precipitacion, estado_cielo, viento, temperatura)>
 <!ATTLIST dia
     fecha CDATA #REQUIRED>

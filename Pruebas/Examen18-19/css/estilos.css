@@ -1,1 +1,24 @@
-﻿  
+#contenedor{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.caja{
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.caja div:first-of-type{
+    font-weight: bold;
+    margin: 3%;
+}
+
+.caja div:last-of-type{
+    background-color: grey;
+    color: white;
+    margin: auto;
+    width: 75%;
+    padding: 2px;
+    border-radius: 5%;
+}
