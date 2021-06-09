@@ -4,18 +4,24 @@
 
 h1{
 	font-size: 30px;
-	text-align: center;
 	background-color: #9370DB;
 }
 
-h3{
+h1, h2, h3, a{
 	text-align: center;
 }
 
+h3{
+    background-color: #9350D2;
+
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
 a{
-	text-decoration: none; color: #4B0082; width: auto;  padding-left: 45%; 
+	text-decoration: none; color: #4B0082; width: auto;  padding-left: 47.5%; 
 }
 
 .rss{
-	text-decoration: none; color: #4B0082; width: auto; padding-left: 40%; margin-top: 100px; 
+	text-decoration: none; color: #4B0082; width: auto; padding-left: 43.5%; margin-top: 100px; 
 }
