@@ -1,0 +1,6 @@
+body{ width: 1024px; margin:0 auto;}
+table{width: 100%; border-collapse: collapse;}
+h1, th,footer div {margin-top: 10px;color:gold; background-color:goldenrod;padding:10px;}
+h1 {font-size: 2em}
+h2 {font-size: 1.5em; color:goldenrod;padding:10px;border:1px solid goldenrod;}
+table, th, tr, td {border:1px solid goldenrod; padding: 5px;}
